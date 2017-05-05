@@ -24,7 +24,13 @@ Example : <code>http://localhost/api.php?table=user&type=like&field=name&search=
 <b>Get All with custom table</b>
 <br>
 <quote>
-Example : <code>https://localhost/api.php?table=messages</code>
+Example : <code>http://localhost/api.php?table=messages</code>
+</quote>
+
+<b>Get All with custom query</b>
+<br>
+<quote>
+Example : <code>localhost/api.php?q=SELECT * FROM users WHERE username='admin'</code>
 </quote>
 
 <b>Insert Data (Method POST)</b>
