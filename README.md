@@ -31,6 +31,8 @@ Example : <code>http://localhost/api.php?table=messages</code>
 <br>
 <quote>
 Example : <code>localhost/api.php?q=SELECT * FROM users WHERE username='admin'</code>
+<br>
+Don't forget to set <code>$query_type 	= 'manual';</code>
 </quote>
 
 <b>Insert Data (Method POST)</b>
