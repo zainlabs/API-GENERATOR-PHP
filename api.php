@@ -34,6 +34,15 @@
 	$db 			= mysqli_connect($host, $username, $password, $db_name);
 	/* END SETTING */
 
+
+
+	/* START FUNCTION TO PROTECT PARAMETER */
+	function protect($value='')
+	{
+		return mysql_escape_string(strip_tags(stripslashes(trim($value))));
+	}
+	/* END FUNCTION TO PROTECT PARAMETER */
+
 	
 
 	/* START QUERY TYPE JOIN */
@@ -49,6 +58,14 @@
 
 
 
+   	        /**================================================================================================**/
+	       /**================================================================================================**/
+	      //*  											   				   				   				     *//
+	     //*               		Access api with parameter q											    	*//
+	    //*   					Example = http://localhost/api.php?q=SELECT * FROM users 				   *//
+	   //*  																							  *//
+	  /**================================================================================================**/
+     /**================================================================================================**/
 	/* START QUERY MANUAL */
 	$query_manual = '';
 	if (isset($_GET['q']) && $_GET['q']!='') {
@@ -104,15 +121,6 @@
 		$key = $key_table['Column_name'];
 	}
 	/* END GET PRIMARY KEY FROM TABLE */
-
-
-
-	/* START FUNCTION TO PROTECT PARAMETER */
-	function protect($value='')
-	{
-		return mysql_escape_string(strip_tags(stripslashes(trim($value))));
-	}
-	/* END FUNCTION TO PROTECT PARAMETER */
 
 
 
